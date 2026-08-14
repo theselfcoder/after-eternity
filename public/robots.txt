@@ -3,9 +3,7 @@
 User-agent: *
 Allow: /
 
-# Keep server-side handlers and the post-submit page out of the index.
-Disallow: /contact.php
-Disallow: /config.php
+# Keep the post-submit page out of the index.
 Disallow: /thank-you
 
 Sitemap: https://after-eternity.com/sitemap.xml
