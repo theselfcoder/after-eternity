@@ -1,0 +1,11 @@
+# After Eternity — robots.txt
+# Allow all search engines to crawl the whole site.
+User-agent: *
+Allow: /
+
+# Keep server-side handlers and the post-submit page out of the index.
+Disallow: /contact.php
+Disallow: /config.php
+Disallow: /thank-you
+
+Sitemap: https://after-eternity.com/sitemap.xml
