@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { PhoneIcon, SendIcon, SpinnerIcon } from './icons';
 import { formatPhoneDisplay, normalizePhoneE164 } from '../lib/phone';
+import { trackLead } from '../lib/analytics';
 
 const SELECT_CLASS =
   'w-full bg-transparent border-b border-white/20 py-2.5 text-white focus:border-crimson outline-none transition-colors appearance-none';
@@ -37,6 +38,7 @@ export default function ContactForm() {
     try {
       const res = await fetch('/api/contact', { method: 'POST', body: data });
       if (!res.ok) throw new Error('failed');
+      trackLead(service || undefined);
       window.location.href = '/thank-you';
     } catch {
       setStatus('error');
