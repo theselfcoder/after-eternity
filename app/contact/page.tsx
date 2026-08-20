@@ -7,7 +7,8 @@ import ContactForm from '@/components/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact | After Eternity',
   description:
-    'Contact After Eternity — tell us about your film project and get a tailored post-production workflow and quote.'
+    'Contact After Eternity — tell us about your film project and get a tailored post-production workflow and quote.',
+  robots: { index: true, follow: true }
 };
 
 export default function ContactPage() {

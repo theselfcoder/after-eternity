@@ -8,7 +8,8 @@ import { ArrowRightIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'About | After Eternity',
   description:
-    'About After Eternity — a film production and post-production studio crafting images that endure beyond the final frame.'
+    'About After Eternity — a film production and post-production studio crafting images that endure beyond the final frame.',
+  robots: { index: true, follow: true }
 };
 
 export default function AboutPage() {

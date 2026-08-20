@@ -7,7 +7,8 @@ import PortfolioGrid from '@/components/PortfolioGrid';
 export const metadata: Metadata = {
   title: 'Portfolio | After Eternity',
   description:
-    'Selected works from After Eternity — color grading, editing, and post-production demos. Visit our YouTube channel for more.'
+    'Selected works from After Eternity — color grading, editing, and post-production demos. Visit our YouTube channel for more.',
+  robots: { index: true, follow: true }
 };
 
 export default function PortfolioPage() {

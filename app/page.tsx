@@ -1,7 +1,12 @@
+import type { Metadata } from 'next';
 import PageBackground from '@/components/PageBackground';
 import Nav, { FloatingCall } from '@/components/Nav';
 import HomeHero from '@/components/HomeHero';
 import HomeView from '@/components/HomeView';
+
+export const metadata: Metadata = {
+  robots: { index: true, follow: true }
+};
 
 export default function HomePage() {
   return (

@@ -6,7 +6,8 @@ import SiteFooter from '@/components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Terms & Conditions | After Eternity',
   description:
-    'The Terms & Conditions governing your use of after-eternity.com, including inquiries, call recording, and intellectual property.'
+    'The Terms & Conditions governing your use of after-eternity.com, including inquiries, call recording, and intellectual property.',
+  robots: { index: true, follow: true }
 };
 
 export default function TermsPage() {

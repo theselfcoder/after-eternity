@@ -9,7 +9,8 @@ import { BackArrowIcon } from '@/components/icons';
 export const metadata: Metadata = {
   title: 'FAQ | After Eternity',
   description:
-    'Post-production knowledge base — professional insights on color grading, editing, sound design, and full post-production from After Eternity.'
+    'Post-production knowledge base — professional insights on color grading, editing, sound design, and full post-production from After Eternity.',
+  robots: { index: true, follow: true }
 };
 
 export default function FaqPage() {

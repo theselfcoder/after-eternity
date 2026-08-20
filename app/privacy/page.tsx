@@ -6,7 +6,8 @@ import SiteFooter from '@/components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Privacy Policy | After Eternity',
   description:
-    'How After Eternity collects, uses, and protects your information, including call recording via CallRail.'
+    'How After Eternity collects, uses, and protects your information, including call recording via CallRail.',
+  robots: { index: true, follow: true }
 };
 
 export default function PrivacyPage() {
