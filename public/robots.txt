@@ -6,4 +6,4 @@ Allow: /
 # Keep the post-submit page out of the index.
 Disallow: /thank-you
 
-Sitemap: https://after-eternity.com/sitemap.xml
+Sitemap: https://www.after-eternity.com/sitemap.xml
