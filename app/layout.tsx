@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import AnalyticsProvider from '@/components/AnalyticsProvider';
+import ConsentProvider from '@/components/ConsentProvider';
 import LenisProvider from '@/components/LenisProvider';
 import './globals.css';
 
@@ -10,6 +11,20 @@ const THEME_INIT = `(function () {
   try { document.documentElement.dataset.theme = localStorage.getItem('ae-theme') || 'dark'; }
   catch (e) { document.documentElement.dataset.theme = 'dark'; }
 })();`;
+
+const CONSENT_INIT = `window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+window.gtag = gtag;
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied',
+  functionality_storage: 'granted',
+  personalization_storage: 'denied',
+  security_storage: 'granted',
+  wait_for_update: 500
+});`;
 
 export const metadata: Metadata = {
   title: 'After Eternity | Film Production Studio',
@@ -30,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_INIT }} />
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -40,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <AnalyticsProvider />
+        <ConsentProvider />
         <LenisProvider>{children}</LenisProvider>
       </body>
     </html>

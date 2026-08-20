@@ -24,7 +24,7 @@ export default function AnalyticsProvider() {
     }
     window.gtag = gtag;
     gtag('js', new Date());
-    if (AW_ID) gtag('config', `AW-${AW_ID}`, { allow_enhanced_conversions: true });
+    if (AW_ID) gtag('config', `AW-${AW_ID}`);
     if (GA4_ID) gtag('config', GA4_ID);
 
     const firstId = AW_ID ? `AW-${AW_ID}` : GA4_ID;

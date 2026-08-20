@@ -6,7 +6,7 @@ import SiteFooter from '@/components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Terms & Conditions | After Eternity',
   description:
-    'The Terms & Conditions governing your use of after-eternity.com, including inquiries, call recording, and intellectual property.',
+    'The Terms & Conditions governing your use of after-eternity.com, including inquiries, communications, and intellectual property.',
   robots: { index: true, follow: true }
 };
 
@@ -52,16 +52,11 @@ export default function TermsPage() {
             Terms.
           </p>
 
-          <h2>3. Communications &amp; Call Recording</h2>
+          <h2>3. Communications</h2>
           <p>
             By providing your contact details or contacting us, you consent to receive communications from us relating
-            to your inquiry, and (where permitted) marketing communications, from which you may opt out at any time.{' '}
-            <strong>
-              Calls to and from the phone numbers on our Site may be recorded and monitored using CallRail for quality
-              assurance and conversion-tracking purposes.
-            </strong>{' '}
-            By placing or continuing a call with us, you consent to such recording and monitoring. Please see our{' '}
-            <a href="/privacy">Privacy Policy</a> for details.
+            to your inquiry, and (where permitted) marketing communications, from which you may opt out at any time.
+            Please see our <a href="/privacy">Privacy Policy</a> for details.
           </p>
 
           <h2>4. Intellectual Property</h2>
@@ -117,8 +112,7 @@ export default function TermsPage() {
           <h2>10. Privacy</h2>
           <p>
             Your use of the Site is also governed by our <a href="/privacy">Privacy Policy</a>, which describes how we
-            collect, use, and protect your information, including call recording via CallRail. Please review it
-            carefully.
+            collect, use, and protect your information. Please review it carefully.
           </p>
 
           <h2>11. Changes to These Terms</h2>

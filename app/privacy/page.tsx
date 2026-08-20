@@ -6,7 +6,7 @@ import SiteFooter from '@/components/SiteFooter';
 export const metadata: Metadata = {
   title: 'Privacy Policy | After Eternity',
   description:
-    'How After Eternity collects, uses, and protects your information, including call recording via CallRail.',
+    'How After Eternity collects, uses, and protects your information.',
   robots: { index: true, follow: true }
 };
 
@@ -42,13 +42,11 @@ export default function PrivacyPage() {
             estimated runtime, camera brand, and any project details or messages you send.
           </p>
 
-          <h3>b. Call recordings and telephone information</h3>
+          <h3>b. Information from phone calls</h3>
           <p>
-            When you call a phone number shown on our Site, your call is handled through <strong>CallRail</strong>, a
-            third-party call-tracking and analytics provider. As described in Section 3, your calls may be{' '}
-            <strong>recorded and monitored</strong>, and CallRail may collect information such as your phone number,
-            caller ID, the date, time, and duration of the call, and the marketing source or web page that led you to
-            call.
+            When you call a phone number shown on our Site, we may receive basic call information — such as your phone
+            number, caller ID, and the date, time, and duration of the call — in order to respond to your inquiry.
+            Calls to our phone numbers are <strong>not recorded</strong>.
           </p>
 
           <h3>c. Information collected automatically</h3>
@@ -56,8 +54,8 @@ export default function PrivacyPage() {
             When you visit the Site, we and our analytics and advertising partners automatically collect certain
             technical information using cookies and similar technologies, including your IP address, browser and
             device type, operating system, referring URLs, pages viewed, and how you interact with the Site. This is
-            collected through <strong>Google Tag Manager</strong> and associated Google services (such as Google
-            Analytics and Google Ads), and through CallRail&apos;s dynamic phone-number insertion.
+            collected through Google services such as Google Analytics and Google Ads. We ask for your consent before
+            enabling advertising and analytics cookies through a consent banner shown on the Site.
           </p>
 
           <h2>2. How We Use Your Information</h2>
@@ -79,29 +77,22 @@ export default function PrivacyPage() {
             <li>To comply with legal obligations and enforce our terms.</li>
           </ul>
 
-          <h2>3. Call Recording &amp; Monitoring</h2>
+          <h2>3. Phone Calls</h2>
           <p>
-            Please be aware that <strong>calls to and from the phone numbers on our Site may be recorded and
-            monitored</strong> using CallRail for <strong>quality assurance and conversion-tracking purposes</strong>.
-            When you place or continue a call with us, you consent to your call being recorded and monitored for these
-            purposes. If you do not wish to be recorded, please let us know at the start of the call or contact us
-            instead through our <a href="/#contact">website contact form</a>, by email, or by another written method.
-          </p>
-          <p>
-            Call recordings and related call data are processed and stored by CallRail on our behalf. For more
-            information about how CallRail handles this data, see CallRail&apos;s privacy notice at{' '}
-            <a href="https://www.callrail.com/privacy" target="_blank" rel="noopener noreferrer">
-              callrail.com/privacy
-            </a>
-            .
+            Calls to the phone numbers on our Site are <strong>not recorded</strong>. Basic call information (such as
+            your phone number, caller ID, and the date, time, and duration of the call) may be collected to respond to
+            your inquiry and to understand which channels led you to call us. If you prefer not to have this
+            information collected, you can contact us through our <a href="/#contact">website contact form</a> or by
+            email instead.
           </p>
 
           <h2>4. Cookies &amp; Tracking Technologies</h2>
           <p>
-            We use cookies, tags, pixels, and similar technologies to run analytics, measure advertising performance,
-            and remember your preferences. You can control or disable cookies through your browser settings; however,
-            some parts of the Site may not function as intended if cookies are disabled. Because we use Google
-            advertising and analytics services, you can also learn about and opt out of certain Google tracking at{' '}
+            We use cookies, tags, pixels, and similar technologies to run analytics and measure advertising
+            performance. When you first visit the Site, we ask for your consent to advertising and analytics cookies
+            through a consent banner, and we honor your choice. You can change your preference at any time by clearing
+            your cookies or contacting us. Because we use Google advertising and analytics services, you can also learn
+            about and opt out of certain Google tracking at{' '}
             <a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">
               adssettings.google.com
             </a>{' '}
@@ -120,13 +111,10 @@ export default function PrivacyPage() {
           </p>
           <ul>
             <li>
-              <strong>CallRail</strong> — call tracking, recording, and analytics.
-            </li>
-            <li>
               <strong>systeme.io</strong> — email marketing and contact management.
             </li>
             <li>
-              <strong>Google</strong> (Tag Manager, Analytics, Ads) — website analytics and advertising measurement.
+              <strong>Google</strong> (Analytics, Ads) — website analytics and advertising measurement.
             </li>
             <li>
               <strong>YouTube / Google</strong> — embedded video playback on the Site.
@@ -151,7 +139,7 @@ export default function PrivacyPage() {
 
           <h2>7. Data Retention</h2>
           <p>
-            We retain personal information, call recordings, and related data for as long as reasonably necessary to
+            We retain personal information and related data for as long as reasonably necessary to
             fulfill the purposes described in this policy, to provide our services, to comply with our legal
             obligations, resolve disputes, and enforce our agreements. When information is no longer needed, we take
             reasonable steps to delete or de-identify it.

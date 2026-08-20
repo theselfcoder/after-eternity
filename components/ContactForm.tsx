@@ -47,6 +47,14 @@ export default function ContactForm() {
 
   return (
     <form id="contact-form" className="space-y-4" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="company_site"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
       <div className="space-y-1.5">
         <label className="text-xs text-gray-500 uppercase tracking-widest">Name / Company</label>
         <input required name="name" type="text" className={INPUT_CLASS} />
@@ -240,7 +248,7 @@ export default function ContactForm() {
         We&apos;ll respond within one business day. Your information is kept confidential.
       </p>
       <p className="text-center text-[10px] text-gray-600 mt-2 leading-relaxed">
-        Calls may be recorded &amp; monitored via CallRail for quality assurance and conversion tracking. See our{' '}
+        We value your privacy. See our{' '}
         <a href="/privacy" className="underline hover:text-crimson transition-colors">
           Privacy Policy
         </a>

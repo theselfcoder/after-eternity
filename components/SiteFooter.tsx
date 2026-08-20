@@ -19,7 +19,7 @@ interface SiteFooterProps {
 export default function SiteFooter({
   active,
   legalActive,
-  copyright = '\u00A9 2024 After Eternity. All Rights Reserved.',
+  copyright = '\u00A9 2026 After Eternity. All Rights Reserved.',
   showPhone = true
 }: SiteFooterProps) {
   return (
@@ -27,11 +27,11 @@ export default function SiteFooter({
       <div className="max-w-4xl mx-auto px-6 py-10 flex flex-col items-center gap-4 text-center">
         {showPhone && (
           <a
-            href="tel:+12137156971"
+            href="tel:+12132549766"
             className="text-white hover:text-crimson transition-colors duration-300 flex items-center gap-2 text-base font-bold tracking-widest"
           >
             <PhoneIcon className="w-4 h-4" />
-            <span>213-715-6971</span>
+            <span>213 254 9766</span>
           </a>
         )}
         <a

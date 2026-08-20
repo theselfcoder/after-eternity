@@ -33,6 +33,28 @@ function buildEmailBody(values: Record<string, string>) {
 
 const SYSTEME_API = 'https://api.systeme.io';
 
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const RATE_LIMIT_MAX = 5;
+const rateBuckets = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const timestamps = (rateBuckets.get(ip) || []).filter((t) => now - t < RATE_LIMIT_WINDOW_MS);
+  if (timestamps.length >= RATE_LIMIT_MAX) {
+    rateBuckets.set(ip, timestamps);
+    return true;
+  }
+  timestamps.push(now);
+  rateBuckets.set(ip, timestamps);
+  return false;
+}
+
+function clientIp(req: NextRequest): string {
+  const forwarded = req.headers.get('x-forwarded-for');
+  if (forwarded) return forwarded.split(',')[0].trim();
+  return req.headers.get('x-real-ip') || 'unknown';
+}
+
 const FIELD_SLUGS: Record<string, string> = {
   name: 'first_name',
   phone_number: 'phone_number',
@@ -116,6 +138,15 @@ async function syncSysteme(values: Record<string, string>): Promise<void> {
 
 export async function POST(req: NextRequest) {
   const form = await req.formData();
+
+  if (String(form.get('company_site') || '').trim()) {
+    return NextResponse.json({ ok: true });
+  }
+
+  if (isRateLimited(clientIp(req))) {
+    return NextResponse.json({ ok: false, error: 'Too many requests' }, { status: 429 });
+  }
+
   const values: Record<string, string> = {};
   for (const field of SERVICE_FIELDS) {
     values[field] = String(form.get(field) || '').trim();

@@ -99,11 +99,11 @@ export default function HomeView() {
 
         <footer className="absolute bottom-4 left-0 w-full flex flex-col items-center gap-3 pb-4">
           <a
-            href="tel:+12137156971"
+            href="tel:+12132549766"
             className="text-white hover:text-crimson transition-colors duration-300 flex items-center gap-2 text-base font-bold tracking-widest"
           >
             <PhoneIcon className="w-4 h-4" />
-            <span>213-715-6971</span>
+            <span>213 254 9766</span>
           </a>
           <a
             href="https://instagram.com/iviujtaba"
@@ -138,7 +138,7 @@ export default function HomeView() {
             </a>
           </div>
           <span className="text-gray-700 text-xs uppercase tracking-widest">
-            &copy; 2024 After Eternity. All Rights Reserved.
+            &copy; 2026 After Eternity. All Rights Reserved.
           </span>
         </footer>
       </section>
